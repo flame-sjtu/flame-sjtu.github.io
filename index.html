@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FLAME: Learning to Navigate with Multimodal LLM in Urban Environments</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+<!--  <div class="navbar-menu">-->
+<!--    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">-->
+<!--      <a class="navbar-item" href="https://keunhong.com">-->
+<!--      <span class="icon">-->
+<!--          <i class="fas fa-home"></i>-->
+<!--      </span>-->
+<!--      </a>-->
+
+<!--      <div class="navbar-item has-dropdown is-hoverable">-->
+<!--        <a class="navbar-link">-->
+<!--          More Research-->
+<!--        </a>-->
+<!--        <div class="navbar-dropdown">-->
+<!--          <a class="navbar-item" href="https://hypernerf.github.io">-->
+<!--            HyperNeRF-->
+<!--          </a>-->
+<!--          <a class="navbar-item" href="https://nerfies.github.io">-->
+<!--            Nerfies-->
+<!--          </a>-->
+<!--          <a class="navbar-item" href="https://latentfusion.github.io">-->
+<!--            LatentFusion-->
+<!--          </a>-->
+<!--          <a class="navbar-item" href="https://photoshape.github.io">-->
+<!--            PhotoShape-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">FLAME: Learning to Navigate with Multimodal LLM in Urban Environments</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a>Yunzhe Xu</a>,
+            </span>
+            <span class="author-block">
+              <a>Yiyuan Pan</a>,
+            </span>
+            <span class="author-block">
+              <a>Zhe Liu</a>,
+            </span>
+            <span class="author-block">
+              <a>Hesheng Wang</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Shanghai Jiaotong University</span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2408.11051"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2408.11051"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-youtube"></i>-->
+<!--                  </span>-->
+<!--                  <span>Video</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/xyz9911/FLAME"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/xyz9911/FLAME/tree/main/datasets"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+<!--            </div>-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/demo.mp4"
+                type="video/mp4">
+      </video>
+        <br><br>
+      <h2 class="subtitle has-text-centered">
+        <li> Our agent, powered solely by a Multimodal LLM (MLLM), demonstrates effectiveness in correlating specific environmental features with verbal navigation instruction.</li>
+          <br><li>We propose a tailored three-phase tuning technique for adapting Flamingo into navigation scenarios using synthetic data, fully unleashing MLLM's power.</li>
+          <br><li> Our approach outperforms the latest state-of-the-art (SOTA) methods by 7.3% TC on Touchdown, proving that MLLMs can significantly outperform specialized VLN models.</li>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Workflow Animation</h2>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/intro.mp4"
+                type="video/mp4">
+      </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            <p>
+                Large Language Models (LLMs) have demonstrated potential in Vision-and-Language Navigation (VLN) tasks, yet current applications face challenges. While LLMs excel in general conversation scenarios, they struggle with specialized navigation tasks, yielding suboptimal performance compared to specialized VLN models. We introduce FLAME (FLAMingo-Architected Embodied Agent), a novel Multimodal LLM-based agent and architecture designed for urban VLN tasks that efficiently handles multiple observations. Our approach implements a three-phase tuning technique for effective adaptation to navigation tasks, including single perception tuning for street view description, multiple perception tuning for trajectory summarization, and end-to-end training on VLN datasets. The augmented datasets are synthesized automatically. Experimental results demonstrate FLAME's superiority over existing methods, surpassing state-of-the-art methods by a 7.3% increase in task completion rate on Touchdown dataset. This work showcases the potential of Multimodal LLMs (MLLMs) in complex navigation tasks, representing an advancement towards practical applications of MLLMs in embodied AI.
+            </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Details</h2>
+        <div class="content has-text-justified">
+            <p><b>FLAME Architecture:</b>
+             Based on Flamingo, FLAME operates autoregressively and efficiently handles multiple perceptions without increasing context length, ensuring efficiency in end-to-end training and inference.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video autoplay muted playsinline height="100%">
+            <source src="./static/videos/method1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="content has-text-justified">
+          <p><b>Three-phase Tuning for Navigation and Synthetic Data Generation:</b>
+              We propose a three-phase tuning technique to adapt Flamingo model to navigation tasks using augmented data: <b>1)</b> Single perception tuning: Learning to describe street views. <b>2)</b> Multiple perception tuning: Learning to summarize agent trajectories. <b>3)</b> End-to-End training and evaluation on VLN datasets. To support the first two tuning phases, we utilize GPT-4 to synthesize captions and route summaries. We also synthesize navigation rationales for urban VLN datasets to validate FLAME's reasoning capability.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video autoplay muted playsinline height="100%">
+            <source src="./static/videos/method2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison with SOTAs</h2>
+        <div class="content">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th></th>
+                <th colspan="6">Touchdown</th>
+                <th colspan="6">Map2seq</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th colspan="3">Dev Set</th>
+                <th colspan="3">Test Set</th>
+                <th colspan="3">Dev Set</th>
+                <th colspan="3">Test Set</th>
+              </tr>
+              <tr>
+                <th>Model</th>
+                <th>TC↑</th>
+                <th>SPD↓</th>
+                <th>nDTW↑</th>
+                <th>TC↑</th>
+                <th>SPD↓</th>
+                <th>nDTW↑</th>
+                <th>TC↑</th>
+                <th>SPD↓</th>
+                <th>nDTW↑</th>
+                <th>TC↑</th>
+                <th>SPD↓</th>
+                <th>nDTW↑</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RCONCAT (2019)</td>
+                <td>10.60</td>
+                <td>20.4</td>
+                <td>22.50</td>
+                <td>11.80</td>
+                <td>20.40</td>
+                <td>22.90</td>
+                <td>17.10</td>
+                <td>-</td>
+                <td>30.70</td>
+                <td>14.70</td>
+                <td>-</td>
+                <td>27.70</td>
+              </tr>
+              <tr>
+                <td>GA (2019)</td>
+                <td>12.00</td>
+                <td>18.70</td>
+                <td>25.20</td>
+                <td>11.9</td>
+                <td>19.00</td>
+                <td>24.90</td>
+                <td>18.20</td>
+                <td>-</td>
+                <td>33.00</td>
+                <td>17.00</td>
+                <td>-</td>
+                <td>30.10</td>
+              </tr>
+              <tr>
+                <td>VLN-Trans (2021)</td>
+                <td>15.00</td>
+                <td>20.30</td>
+                <td>27.00</td>
+                <td>16.20</td>
+                <td>20.80</td>
+                <td>27.80</td>
+                <td>18.60</td>
+                <td>-</td>
+                <td>31.10</td>
+                <td>17.00</td>
+                <td>-</td>
+                <td>29.50</td>
+              </tr>
+              <tr>
+                <td>ARC+L2S (2020)</td>
+                <td>19.48</td>
+                <td>17.05</td>
+                <td>-</td>
+                <td>16.68</td>
+                <td>18.84</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>ORAR (2022)</td>
+                <td>30.05</td>
+                <td>11.12</td>
+                <td>45.50</td>
+                <td>29.60</td>
+                <td>11.79</td>
+                <td>45.30</td>
+                <td>49.88</td>
+                <td><b>5.87</b></td>
+                <td>62.70</td>
+                <td>47.75</td>
+                <td>6.53</td>
+                <td>62.10</td>
+              </tr>
+              <tr>
+                <td>VELMA (2023)</td>
+                <td>29.83</td>
+                <td>14.67</td>
+                <td>43.44</td>
+                <td>27.38</td>
+                <td>15.03</td>
+                <td>41.93</td>
+                <td>52.75</td>
+                <td>6.78</td>
+                <td>66.45</td>
+                <td>48.70</td>
+                <td>6.80</td>
+                <td>62.37</td>
+              </tr>
+              <tr>
+                <td>PM-VLN (2023)</td>
+                <td>33.00</td>
+                <td>23.60</td>
+                <td>-</td>
+                <td>33.40</td>
+                <td>23.80</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>VLN-Video (2024)</td>
+                <td>34.50</td>
+                <td>9.60</td>
+                <td>-</td>
+                <td>31.70</td>
+                <td>11.2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Loc4Plan (2024)</td>
+                <td>34.50</td>
+                <td>10.50</td>
+                <td>-</td>
+                <td>32.90</td>
+                <td>11.50</td>
+                <td>-</td>
+                <td>48.00</td>
+                <td>7.00</td>
+                <td>-</td>
+                <td>45.30</td>
+                <td>7.20</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><b>FLAME</b></td>
+                <td><b>41.28</b></td>
+                <td><b>9.14</b></td>
+                <td><b>55.96</b></td>
+                <td><b>40.20</b></td>
+                <td><b>9.53</b></td>
+                <td><b>54.56</b></td>
+                <td><b>56.95</b></td>
+                <td>5.95</td>
+                <td><b>71.36</b></td>
+                <td><b>52.44</b></td>
+                <td><b>5.91</b></td>
+                <td><b>67.72</b></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="is-size-6 has-text-centered">
+            Comparison with state-of-the-art models on Touchdown and Map2seq datasets. <strong>Bold</strong> values indicate best performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{xu2024flame,
+        title={FLAME: Learning to Navigate with Multimodal LLM in Urban Environments},
+        author={Xu, Yunzhe and Pan, Yiyuan and Liu, Zhe and Wang, Hesheng},
+        journal={arXiv preprint arXiv:2408.11051},
+        year={2024}}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. You are also free to borrow the <a href="https://github.com/flame-sjtu/flame-sjtu.github.io">source code</a> of this website, we just ask that you link back to this page in the footer. This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
